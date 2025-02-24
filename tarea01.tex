@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{polyglossia}
+\usepackage{enumerate} 
+\usepackage{fixltx2e}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{xfp}
+\usepackage{pgf}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\newcommand{\contradiction}{\mathrel{\text{\lightning}}}
+\setlength{\parindent}{0cm}
+
+% Color personalizado para el fondo
+\definecolor{bgcolor}{rgb}{0.95,0.95,0.92}
+\definecolor{mycolor}{rgb}{0.1,0.2,0.7}
+
+\geometry{top=4cm, head=4cm, left=2.5cm, right=2.5cm,a4paper}
+\pagestyle{fancy}
+\fancyhead[R]{\textcolor{gray}{Universidad Nacional Autónoma de México\\ Facultad de Ciencias\\
+Licenciatura en Ciencias de la Computación\\
+Álgebra Superior II\\}}
+
+
+\setdefaultlanguage{spanish}
+\title{\textbf{Tarea 01\\ Enteros}
+\vspace{1cm}}
+\author{Larios Ponce Héctor Manuel\\Valencia Morales Indra Gabriel}
+\date{\textit{\today}}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}
+{\textcolor{mycolor}{\thesection}}
+{1em}
+{\textcolor{mycolor}}
+\begin{document}
+\maketitle
+
+\pagebreak
+
+
+\section{Sea $k$ un número natural. Demuestra por inducción\\matemática que si $n \geq 2$, entonces $\sum\limits_{i=1}^n k = nk$}
+
+\begin{minipage}{\textwidth}
+\setlength{\leftskip}{0.5cm}
+Demostraremos por inducción matemática sobre $n$, con $n \in \mathbb{N}$, que si $n\geq 2$, entonces $\sum\limits{i=1}^n k = nk$
+
+\vspace{0.5cm}
+
+\textbf{Base de inducción:}
+
+\setlength{\leftskip}{1cm}
+Si $n  = 2$ entonces:
+
+Calculando la suma tenemos: $\sum\limits_{i=1}^2 k = k + k = 2k$\\
+$\therefore$ La base de inducción se satisface.
+
+\vspace{0.5cm}
+\setlength{\leftskip}{0.5cm}
+\textbf{Hipótesis de inducción:}
+
+\setlength{\leftskip}{1cm}
+Supongamos que para algún $n \in \mathbb{N}$, que si $n \geq 2$ entonces $\sum\limits_{i = 1}^n k = nk$
+
+\vspace{0.5cm}
+\setlength{\leftskip}{0.5cm}
+\textbf{Paso inductivo:}
+
+\setlength{\leftskip}{1cm}
+Si $n \in \mathbb{N}$, entonces $\sum\limits_{i=1}^{n+1} k = (n + 1)k$
+
+\vspace{0.5cm}
+\textit{Dem.}
+
+\vspace{0.5cm}
+Sea $n + 1 \in \mathbb{N}$, podemos expresar $(n + 1)k$ como $\sum\limits_{i=1}^n k + k$, entonces tenemos:
+
+$\sum\limits_{i=1}^{n+1} k = \sum\limits_{i=1}^n k + k$
+
+\vspace{0.5cm}
+$\sum\limits_{i=1}^{n+1} k = nk + k$ \textit{-Por hipótesis de inducción, $nk = \sum\limits_{i=1}^n k$}
+
+\vspace{0.5cm}
+$\sum\limits_{i=1}^{n+1} k = (n + 1)k$ \textit{-Factorizando k}
+
+\vspace{0.5cm}
+$\therefore$ Por el principio de inducción matematica queda demostrado que $\forall n$ si $n\geq 2$, entonces $\sum\limits_{i=1}^n k$
+\end{minipage}
+\end{document}
