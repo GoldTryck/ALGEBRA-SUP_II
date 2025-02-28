@@ -78,12 +78,43 @@ Por hipotesis
 % Ejercicio 2
 %
 \textbf{2.} Considera la relación $\sim$ usada para definir a $\mathbb{Z}$ y $k \in \mathbb{N}$. Demuestra que:
-    \begin{enumerate}[label=\alph*)]
-        \item $\overline{(k, 0)} = \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$.
+\begin{enumerate}[label=\alph*)]
+    \item $\overline{(k, 0)} = \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$.\\
 
-        \item Usando el inciso previo, escribe por extensión el conjunto 
+    $\subseteq)$ 
+    $P.D$ existe $(x, y) \in \mathbb{N} \times \mathbb{N}$ y existe un elemento $\ast \in \mathbb{N}$ tal que $x = k + \ast$ y $y =\ast $\\
 
-    \end{enumerate}
+    Sea $(x, y) \in \overline{(k, 0)}$, por definición de clase de equivalencia, $(x, y) \sim (k, 0)$, $i.e$:
+    \begin{align*}
+        x + 0 &= y + k\\
+        x &= y + k\\
+    \end{align*}
+
+    Con lo anterior, decimos que $\ast = y$\\
+
+    Por lo tanto $(x, y) \in \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$\\
+    
+    $\supseteq)$ Sea $(x, y) \in \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$\\
+
+    Es decir, $(x, y) \in \mathbb{N} \times \mathbb{N}$ y existe un $\ast \in \mathbb{N}$ tal que $x = k + \ast$ y $y = \ast$.\\
+    
+    Proponemos $y = \ast$, enotnces $y = y$ y $x = y + k$\\
+
+    De esta última $x + 0 = y + k$, así $(x, y) \sim (k, 0)$ y por lo tanto $(x, y) \in \overline{(k, 0)}$\\
+
+    \item Usando el inciso previo, escribe por extensión el conjunto $\overline{(15, 5)}$\\
+
+    Digamos 
+    \begin{align*}
+        \overline{(15, 5)} &= \overline{(\ast, 0)}\\
+        (15, 5) &\sim (\ast, 0)\\
+        15 + 0 &= 5 + \ast\\
+        15 + 0 - 5 &= \ast\\
+        10 &= \ast\\
+    \end{align*}
+
+    Con esto tenemos que $\overline{(15, 5)} = \{(10, 0), (11, 1), (12, 2), (13, 3), (14, 4), (15, 5), \dots\}$\\
+\end{enumerate}
 \vspace{1cm}
 
 %
