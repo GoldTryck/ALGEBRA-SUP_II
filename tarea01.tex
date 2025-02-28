@@ -404,6 +404,76 @@ se cumple que $a | c_1 b_1 + \dots + c_n b_n$
 % ejercicio 7
 %
 \textbf{7.} Sean $a$ y $b$ dos enteros. Muestra que si $13 | 5a + 8b$, entonces $13|31a - 5b$\\
+\subsection*{(a)}
+Sean \(a,b \in \mathbb{Z}\) (o en \(\mathbb{Z}^+\), según el contexto) tales que \(a \leq b\). Se desea probar que si \(0<n\), entonces
+\[
+a^n \;\leq\; b^n.
+\]
+
+\noindent
+\textbf{Demostración (por inducción en \(n\)):}
+\begin{itemize}
+    \item \textbf{Caso base \((n=1)\):}  
+    \[
+    a^1 \;=\; a \;\leq\; b \;=\; b^1,
+    \]
+    por hipótesis.
+
+    \item \textbf{Paso inductivo:} 
+    Supongamos que \(a^n \leq b^n\) para cierto \(n \in \mathbb{N}\). Veamos \(n+1\):
+    \[
+    a^{n+1} \;=\; a^n \cdot a \;\leq\; b^n \cdot b \;=\; b^{n+1},
+    \]
+    ya que \(a \leq b\) y por hipótesis inductiva \(a^n \leq b^n\). Esto cierra la inducción.
+\end{itemize}
+
+\subsection*{(b)}
+Si \(a \leq 0\) y \(0 < b\), entonces
+\[
+ab \;\leq\; a.
+\]
+
+\noindent
+\textbf{Demostración:} 
+
+Consideremos dos casos:
+\begin{itemize}
+    \item \(\mathbf{b=1}.\) Entonces \(ab = a \cdot 1 = a\), por lo que claramente \(ab \leq a\).
+    \item \(\mathbf{b>1}.\) Como \(b>1\), se tiene \(b-1 \geq 1\). Dado que \(a \leq 0\), 
+    \[
+    a(b-1) \;\leq\; 0,
+    \]
+    lo cual implica 
+    \[
+    ab - a \;=\; a(b-1) \;\leq\; 0 
+    \;\Longrightarrow\;
+    ab \;\leq\; a.
+    \]
+\end{itemize}
+
+\subsection*{(c)}
+Si \(a \leq b\) y \(c < d\), probar que 
+\[
+a - d \;<\; b - c.
+\]
+
+\noindent
+\textbf{Demostración:} 
+
+Usamos la definición de desigualdad. Observemos:
+\[
+(b - c) \;-\; (a - d) \;=\; b - c - a + d \;=\; (b - a) + (d - c).
+\]
+Dado que \(a \leq b\), se tiene \(b - a \geq 0\). Y como \(c < d\), se tiene \(d - c > 0\). Por lo tanto,
+\[
+(b-a) + (d-c) \;>\; 0.
+\]
+En consecuencia,
+\[
+(b - c) \;-\; (a - d) \;>\; 0
+\;\;\Longrightarrow\;\;
+a - d \;<\; b - c.
+\]
 
 \vspace{1cm}
 
@@ -411,7 +481,44 @@ se cumple que $a | c_1 b_1 + \dots + c_n b_n$
 % Ejercicio 8
 %
 \textbf{8.} Sean $a$ y $b$ dos enteros no nulos y $d \in \mathbb{Z}^+$ tal que $d | a$ y $d | b$. Muestra que $\frac{ab}{d} = \frac{ba}{d}$.
+Sean \(a\) y \(b\) dos enteros no nulos y \(d \in \mathbb{Z}^+\) tal que \(d \mid a\) y \(d \mid b\). Probar que
+\[
+\frac{ab}{d} \;=\; \frac{ba}{d}.
+\]
 
+\noindent
+\textbf{Demostración:}
+
+Como \(d \mid a\), existen \(m \in \mathbb{Z}\) tal que \(a = dm\). De igual forma, \(d \mid b\) implica la existencia de \(n \in \mathbb{Z}\) con \(b = dn\). Entonces
+\[
+\frac{ab}{d}
+\;=\;
+\frac{(dm)(dn)}{d}
+\;=\;
+\frac{d^2 \, m \, n}{d}
+\;=\;
+d \, m \, n.
+\]
+Análogamente,
+\[
+\frac{ba}{d}
+\;=\;
+\frac{(dn)(dm)}{d}
+\;=\;
+d \, n \, m.
+\]
+Dado que \(mn = nm\) (la multiplicación en \(\mathbb{Z}\) es conmutativa), se concluye 
+\[
+d \, m \, n 
+\;=\; 
+d \, n \, m,
+\]
+y por lo tanto
+\[
+\frac{ab}{d} 
+\;=\; 
+\frac{ba}{d}.
+\]
 \vspace{1cm}
 
 %
