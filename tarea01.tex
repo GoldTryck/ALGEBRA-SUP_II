@@ -17,8 +17,7 @@
 \tcbuselibrary{breakable}
 
 \title{\textbf{Gráficas y Juegos: Tarea 02}}
-\author{Larios Ponce Hector Manuel\\Rendón Ávila Jesús Mateo\\Valencia Morales Indra Gabriel }
-
+\author{Martínez Méndez Ángel Antonio\\Valencia Morales Indra Gabriel\\Rendón Ávila Jesús Mateo}
 \date{\today}
 
 \begin{document}
@@ -57,7 +56,7 @@ Sea $x, y, \in R$, entonces\\
     &= xx -xy +xy -yy\\
     &= xx - yy\\
     &= x^2 -y^2\\
-\end{align*} 
+\end{align*}
 
 $\Longleftarrow)$ $Hipotesis$:  $\forall x, y \in R$ se cumple que $(x + y) \ast (x - y) = x^2 - y^2$.\\
 
@@ -79,289 +78,56 @@ Por hipotesis
 % Ejercicio 2
 %
 \textbf{2.} Considera la relación $\sim$ usada para definir a $\mathbb{Z}$ y $k \in \mathbb{N}$. Demuestra que:
-\begin{enumerate}[label=\alph*)]
-    \item $\overline{(k, 0)} = \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$.\\
+    \begin{enumerate}[label=\alph*)]
+        \item $\overline{(k, 0)} = \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$.
 
-    $\subseteq)$ 
-    $P.D$ existe $(x, y) \in \mathbb{N} \times \mathbb{N}$ y existe un elemento $\ast \in \mathbb{N}$ tal que $x = k + \ast$ y $y =\ast $\\
+        \item Usando el inciso previo, escribe por extensión el conjunto
 
-    Sea $(x, y) \in \overline{(k, 0)}$, por definición de clase de equivalencia, $(x, y) \sim (k, 0)$, $i.e$:
-    \begin{align*}
-        x + 0 &= y + k\\
-        x &= y + k\\
-    \end{align*}
-
-    Con lo anterior, decimos que $\ast = y$\\
-
-    Por lo tanto $(x, y) \in \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$\\
-    
-    $\supseteq)$ Sea $(x, y) \in \{(a, b) \in \mathbb{N} \times \mathbb{N} \mid \text{ existe } n \in \mathbb{N} \text{ tal que } a = k + n \text{ y } b = n\}$\\
-
-    Es decir, $(x, y) \in \mathbb{N} \times \mathbb{N}$ y existe un $\ast \in \mathbb{N}$ tal que $x = k + \ast$ y $y = \ast$.\\
-    
-    Proponemos $y = \ast$, enotnces $y = y$ y $x = y + k$\\
-
-    De esta última $x + 0 = y + k$, así $(x, y) \sim (k, 0)$ y por lo tanto $(x, y) \in \overline{(k, 0)}$\\
-
-    \item Usando el inciso previo, escribe por extensión el conjunto $\overline{(15, 5)}$\\
-
-    Digamos 
-    \begin{align*}
-        \overline{(15, 5)} &= \overline{(\ast, 0)}\\
-        (15, 5) &\sim (\ast, 0)\\
-        15 + 0 &= 5 + \ast\\
-        15 + 0 - 5 &= \ast\\
-        10 &= \ast\\
-    \end{align*}
-
-    Con esto tenemos que $\overline{(15, 5)} = \{(10, 0), (11, 1), (12, 2), (13, 3), (14, 4), (15, 5), \dots\}$\\
-\end{enumerate}
+    \end{enumerate}
 \vspace{1cm}
 
 %
 % Ejercicio 3
 %
-\begin{enumerate}
-    \item[3.] Muestra los siguientes incisos referentes a orden en $\mathbb{Z}$.
-      \begin{enumerate}
-        \item[(a) (+6)] Sean $a,b \in \mathbb{Z}^+$ tales que $a \leq b$. Usando definiciones, prueba que si $0 < n$, entonces $a^n \leq b^n$.
-        \item[(b) (+6)] Si $a \leq 0$ y $0 < b$, entonces $ab \leq a$.
-        \item[(c) (+6)] Si $a \leq b$ y $c < d$, muestra con definiciones que $a - d < b - c$.
-      \end{enumerate}
-    
-    
-      \begin{enumerate}
-    \item[(a)] \textbf{Probar que si $a, b \in \mathbb{Z}^+$ y $a \leq b$, entonces para todo $n \in \mathbb{Z}^+$ se cumple $a^n \leq b^n$.}
-    
-    \noindent
-    \textit{Demostraci\'on por inducci\'on en $n$:}
-    \begin{itemize}
-    \item \textbf{Base inductiva ($n=1$):}  
-    Si $n=1$, entonces $a^1 \leq b^1$ se reduce a $a \leq b$, lo cual es hip\'otesis.
-    
-    \item \textbf{Paso inductivo:}  
-    Supongamos que para un cierto $n \ge 1$ se cumple la proposici\'on, es decir, $a^n \leq b^n$.  
-    Queremos demostrar que $a^{n+1} \leq b^{n+1}$.  
-    En efecto, dado que $a^n \leq b^n$ y $a \leq b$ (ambos no negativos pues $a,b \in \mathbb{Z}^+$), entonces 
-    \[
-    a^{n+1} \;=\; a^n \cdot a \;\le\; b^n \cdot b \;=\; b^{n+1}.
-    \]
-    As\'i, por el principio de inducci\'on, concluimos que para todo $n \in \mathbb{Z}^+$ se cumple $a^n \leq b^n$.
-    \end{itemize}
-    
-    \item[(b)] \textbf{Probar que si $a \leq 0$ y $0 < b$, entonces $ab \leq a$.}
-    
-    \noindent
-    \textit{Demostraci\'on directa:}  
-    Dado que $a \leq 0$, existe un entero no negativo $k$ tal que $a = -k$ o simplemente reconocemos que $a$ es no positivo. El n\'umero $b$ es un entero positivo ($b > 0$). Queremos ver que $ab \leq a$.  
-    
-    Observemos que
-    \[
-    ab \leq a \quad \Longleftrightarrow \quad ab - a \leq 0 \quad \Longleftrightarrow \quad a(b - 1) \leq 0.
-    \]
-    Dado que $a \leq 0$ y $b - 1 \geq 0$ (porque $b > 0$ implica $b - 1 \ge -1$, y si $b=1$, la desigualdad $ab \le a$ es incluso trivial), la multiplicaci\'on de un n\'umero no positivo con uno no negativo resulta ser no positiva. As\'i se concluye que $a(b-1) \leq 0$, por lo que $ab \leq a$.
-    
-    \item[(c)] \textbf{Probar que si $a \leq b$ y $c < d$, entonces $a - d < b - c$.}
-    
-    \noindent
-    \textit{Demostraci\'on:}   CTM HECTOR
-    Dados $a \leq b$ y $c < d$, queremos ver que $a - d < b - c$. Podemos reescribir:
-    \[
-    (a - d) - (b - c) \;=\; a - d - b + c \;=\; (a - b) + (c - d).
-    \]
-    Como $a \leq b$, se tiene $a - b \leq 0$; adem\'as, de $c < d$ se sigue $c - d < 0$. Por lo tanto,
-    \[
-    (a - b) + (c - d) \;<\; 0 + 0 \;=\; 0,
-    \]
-    lo cual implica 
-    \[
-    (a - d) - (b - c) \;<\; 0 
-    \;\;\Longrightarrow\;\;
-    a - d \;<\; b - c.
-    \]
-    As\'i se demuestra la desigualdad requerida.
-    \end{enumerate}
+\textbf{3.} Muestra los siguientes incisos referentes a orden en $\mathbb{Z}$.
+    \begin{enumerate}[label=\alph*)]
+        \item Sean $a, b \in \mathbb{Z}^+$ tales que $a \leq b$. Usando definiciones, prueba que si $0 < n$, enotnces $a^n \leq b^n$.
 
-    %% Ejercicio 4 %%
-    
-    \item[4.] Calcula el cociente y el residuo de los siguientes incisos.
-      \begin{enumerate}
-        \item[(a) (+2)] $175$ entre $46$.
-        \item[(b) (+2)] $20145$ entre $1050$.
-        \item[(c) (+2)] $-326$ entre $40$.
-      \end{enumerate}
-    
-      \begin{enumerate}
-    \item[(a)] \textbf{175 entre 46}
-    
-    Buscamos $q,r \in \mathbb{Z}$ tales que
-    \[
-    175 = 46\,q + r
-    \quad\text{y}\quad
-    0 \leq r < 46.
-    \]
-    Notamos que $46 \cdot 3 = 138$ y $46 \cdot 4 = 184$. Como $138 \le 175 < 184$, se puede deducir que:
-    \[
-    q = 3,
-    \quad
-    r = 175 - 138 = 37.
-    \]
-    Por lo tanto, el cociente es $3$ y el residuo es $37$.
-    
-    \item[(b)] \textbf{20145 entre 1050}
-    
-    Buscamos $q,r \in \mathbb{Z}$ de modo que
-    \[
-    20145 = 1050\,q + r,
-    \quad
-    0 \leq r < 1050.
-    \]
-    Notemos que $1050 \cdot 19 = 19950$ y $1050 \cdot 20 = 21000$. Dado que
-    \[
-    19950 \le 20145 < 21000,
-    \]
-    obtenemos
-    \[
-    q = 19,
-    \quad
-    r = 20145 - 19950 = 195.
-    \]
-    As\'i, el cociente es $19$ y el residuo es $195$.
-    
-    \item[(c)] \textbf{$-326$ entre 40}
-    
-    En este caso, $a = -326$ y $b = 40$. Buscamos $q,r \in \mathbb{Z}$ tales que
-    \[
-    -326 = 40\,q + r
-    \quad\text{con}\quad
-    0 \leq r < 40.
-    \]
-    Como la divisi\'on real es $-326 / 40 \approx -8.15$, el cociente entero (tomando la \emph{parte entera hacia abajo}, es decir, la funci\'on piso) es $q=-9$. Verificamos esto lol:
-    \[
-    40 \cdot (-8) + r = -320 + r \implies r = -6\ (\text{no v\'alido, pues }r<0),
-    \]
-    mientras que
-    \[
-    40 \cdot (-9) + r = -360 + r = -326 \implies r = 34,
-    \]
-    y aqu\'i $0 \le 34 < 40$, que s\'i cumple la condici\'on de residuo. As\'i,
-    \[
-    q = -9,
-    \quad
-    r = 34.
-    \]
-    Por lo tanto, al dividir $-326$ entre $40$, el cociente es $-9$ y el residuo es $34$.
-    \end{enumerate}
+        \item Si $ a \leq 0$ y $0 < b$, entonces $ab \leq a$
 
-    %% Ejercicio 5 %%
-    
-    \item[5.] Muestra los siguientes incisos referentes a divisibilidad en $\mathbb{Z}$.
-    \begin{enumerate}
-        \item[(a) (+6)] Sean $a$ y $b$ dos enteros. Muestra que $|a| \mid b$ si y sólo si $a \mid b$ y $-a \mid b$.
-        \item[(b) (+6)] Muestra usando definiciones que si $a \mid b$ y $a \mid b + c$, entonces $a \mid c$.
-        \item[(c) (+6)] Muestra usando definiciones que si $a,b \in \mathbb{Z}$ y $0 \leq n$, entonces $a - b \mid a^n - b^n$.
+        \item Si $a \leq b$ y $c < d$, muestra con definiciones que $a - d < b - c$.
+
     \end{enumerate}
-    \begin{enumerate}
-    \item[(a)] \textbf{Probar que $|a| \mid b$ si y sólo si $a \mid b$ y $-a \mid b$.}
-    
-    \noindent
-    \textit{Demo:}
-    
-    \begin{itemize}
-    \item[$(\Rightarrow)$] Supongamos que $|a| \mid b$. Por definici\'on de divisibilidad, existe un entero $k$ tal que 
-    \[
-    b = |a|\cdot k.
-    \]
-    Notemos que si $a \ge 0$, entonces $|a| = a$; si $a < 0$, entonces $|a| = -a$. En cualquiera de los casos, podemos relacionar:
-    
-    \[
-    b = |a|\cdot k = \begin{cases}
-    \,a \cdot k, & \text{si } a \ge 0,\\
-    \,-a \cdot k, & \text{si } a < 0.
-    \end{cases}
-    \]
-    Si $a \ge 0$, la expresi\'on $b = a \cdot k$ muestra de inmediato $a \mid b$. Adem\'as, tambi\'en $-a \mid b$ porque $b = (-a)(-k)$.  
-    Si $a < 0$, la expresi\'on $b = (-a) \cdot k$ evidencia $-a \mid b$, y adem\'as $b = a \cdot (-k)$ prueba que $a \mid b$.  
-    
-    En cualquier caso, tanto $a \mid b$ como $-a \mid b$.
-    
-    \item[$(\Leftarrow)$] Supongamos ahora que $a \mid b$ y $-a \mid b$. Entonces existen enteros $m$ y $n$ tales que
-    \[
-    b = a\,m = (-a)\,n.
-    \]
-    En particular, si $a > 0$, entonces $b = a\,m$ nos dice que $|a| = a$ divide a $b$.  
-    Si $a < 0$, tomamos $b = (-a)\,n$ y notamos que $|-a| = -a$; as\'i, $|a| = -a$ divide $b$.  
-    Finalmente, si $a=0$, la condici\'on $|a|\mid b$ significa $0 \mid b$, que s\'olo se cumple si $b=0$. Por otro lado, $a\mid b$ y $-a\mid b$ se reducen a $0\mid b$, igualmente forzando $b=0$.  
-    
-    Con ello se demuestra que $|a|\mid b$ si y s\'olo si $a \mid b$ y $-a \mid b$.
-    \end{itemize}
-    
-    \item[(b)] \textbf{Probar que si $a \mid b$ y $a \mid b + c$, entonces $a \mid c$.}
-    
-    \noindent
-    \textit{Demo por definiciones}
-    
-    Por hip\'otesis, $a \mid b$ implica la existencia de un entero $m$ tal que 
-    \[
-    b = am.
-    \]
-    Asimismo, $a \mid (b + c)$ implica la existencia de un entero $n$ tal que
-    \[
-    b + c = a n.
-    \]
-    Entonces
-    \[
-    c = (b + c) - b = a n - a m = a(n - m).
-    \]
-    Como $n - m$ es un entero, deducimos que $c$ es m\'ultiplo de $a$, es decir, $a \mid c$.
-    
-    \item[(c)] \textbf{Probar que si $a,b \in \mathbb{Z}$ y $0 \leq n$, entonces $a - b \mid a^n - b^n$.}
-    
-    \noindent
-    \textit{Demostraci\'on por inducci\'on en $n$:}
-    
-    \begin{itemize}
-    \item \textbf{Caso base:}  
-    Para $n=0$, tenemos 
-    \[
-    a^0 - b^0 = 1 - 1 = 0,
-    \]
-    y $a-b \mid 0$ es cierto para cualquier entero $a-b$. Para $n=1$, 
-    \[
-    a^1 - b^1 = a - b,
-    \]
-    y evidentemente $a-b \mid a-b$.
-    
-    \item \textbf{Paso inductivo:}  
-    Supongamos que para alg\'un $n \ge 1$ se cumple
-    \[
-    a - b \;\mid\; a^n - b^n.
-    \]
-    Queremos demostrar que
-    \[
-    a - b \;\mid\; a^{n+1} - b^{n+1}.
-    \]
-    Efectivamente,
-    \[
-    a^{n+1} - b^{n+1} \;=\; a \cdot a^n - b \cdot b^n
-    \;=\; a^n(a - b) \;+\; b \bigl(a^n - b^n\bigr).
-    \]
-    Por la hip\'otesis de inducci\'on, $a^n - b^n$ es m\'ultiplo de $a-b$, y claramente $a^n(a-b)$ tambi\'en lo es. Por ende, la suma
-    \[
-    a^n(a - b) \;+\; b\,(a^n - b^n)
-    \]
-    es tambi\'en un m\'ultiplo de $a-b$. De este modo, 
-    \[
-    a - b \;\mid\; a^{n+1} - b^{n+1}.
-    \]
-    Con ello, por el principio de inducci\'on, para todo $n \ge 0$ se cumple 
-    \[
-    a - b \;\mid\; a^n - b^n.
-    \]
-    \end{itemize}
-    
+\vspace{1cm}
+
+%
+% Ejercicio 4
+%
+\textbf{4.} Calcula el cociente y el residuo de los siguientes incisos.
+
+    \begin{enumerate}[label=\alph*)]
+
+        \item 175 entre 46.
+
+        \item 20145 entre 1050.
+
+        \item -326 entre 40.
+
     \end{enumerate}
-\end{enumerate}
+\vspace{1cm}
+
+%
+% Ejercicio 5
+%
+\textbf{5.} Muestra los siguientes incisos referente a divisibilidad en $\mathbb{Z}$
+
+    \begin{enumerate}[label=\alph*)]
+        \item Sean $a$ y $b$ dos enteros. Muestra que $|a| | b$ si y sólo si $a | b$ y $-a |b$.
+
+        \item Muestra usando definiciones que si $a | b$ y $a | b + c$, entonces $a | c$.
+
+        \item Muestra usando definiciones que si $a , b \in \mathbb{Z}$ y $0 \leq n$, entonces $a - b | a^n - b^n$.
+           \end{enumerate}
 
 \vspace{1cm}
 
@@ -370,8 +136,34 @@ Por hipotesis
 %
 \textbf{6.} Muestra mediante inducción matemática lo siguiente. Si $a | b_1, a | b_2, \dots, a | b_n$, entonces $a | b_1 + \dots + a | b_n$.\\
 
-Usando lo anterior, muestra que si $a | b_1, a | b_2, \dots, a | b_n$, entonces para toda $c_1, \dots, c_n \in \mathbb{Z}$ se cumple que $a | c_1b_1 + \dots + c_nb_n$
+Mostraremos por induccion sobre $n$ que si $a | b_1, a | b_2, \dots, a | b_n$, entonces $a | b_1 + \dots + a | b_n$.
+
+Base inductiva. Sea $n = 2$ si $a | b_1, a | b_2$ entonces $a | b_1 + a | b_2$
+
+Por definicion de divisor, como $a | b_1$ entonces existe un único $r \in Z$ tal que $ar = b_1$
+igualmente como $a | b_2$ entonces existe un único $s \in Z$ tal que $as = b_2$
+es decir $a(r+s) = b_1 + b_2$
+por lema 2.1.1 Si $a | b$ y $a | c$, entonces $a | b + c$. Podemos afirmar que $a | b_1 + b_2$
+
+Hipotesis inductiva. supondremos que $k$ es un natural tal que $k \geq 2$ si $a | b_1, a | b_2, \dots, a | b_k$ entonces $a | b_1 + \dots + b_k$ es decir, existe $at = b_1 + \dots + b_k$.
+
+Paso inductivo. Sea $k + 1$ un natural tal que $k + 1 \geq 2$ si $a | b_1, a | b_2, \dots, a | b_k, a | b_k+1$ entonces $a | b_1 + \dots + b_k + b_k+1$
+
+Como por hipotesis inductiva $k \geq 2$, entonces podemos afirmar que $k+1 \geq 3$
+Por definicion de divisor, como $a | b_k+1$ entonces existe un único $v \in Z$ tal que $av = b_k+1$
+por hipotesis inductiva sabemos que $a | b_1, a | b_2, \dots, a | b_k$ entonces $a | b_1 + \dots + b_k$, es decir, existe $at = b_1 + \dots + b_k$
+integrando $b_k+1$ entonces $a | b_1, a | b_2, \dots, a | b_k, a | b_k+1$ entonces $a | b_1 + \dots + b_k + b_k+1$, es decir, $at + av = b_1 + \dots + b_k + b_k+1$.
+reescribiendo tenemos $a(t + v) = b_1 + \dots + b_k + b_k+1$.
+Concluyendo por principio de induccion matematica  para todo $k \geq 2$ si $a | b_1, a | b_2, \dots, a | b_k$, entonces $a | b_1 + \dots + b_k $.
 \vspace{1cm}
+
+Usando lo anterior, muestra que si $a | b_1, a | b_2, \dots, a | b_n$, entonces para toda $c_1, \dots, c_n \in \mathbb{Z}$ se cumple que $a | c_1 b_1 + \dots + c_n b_n$
+\vspace{1cm}
+Sea $a | b_1, a | b_2, \dots, a | b_n$ entonces existe $ar_1 = b_1 , ar_2 = b_2 ... ar_n = b_n$.
+por el lema 2.1.2 Si $a | b$, entonces $ac | bc$. Luego $ac_1 | c_1 b_1, ac_2 | b_2, . . . , ac_n | c_n b_n$ por definicion de divisiblidad $a c_1 r_1 = c_1 b_1 , a c_2 r_2 =  c_2 b_2 ... a c_n r_n = c_n b_n$.
+Como anteriormente vimos $a | b_1 + \dots + b_k$, es decir, $at = b_1 + \dots + b_k$ aplicando el lema 2.1.2 nuevamente podemos decir $avt = c_1 b_1 + c_2 b_2 ... c_n b_n$
+aplicando una vez mas definicion de divisibilidad
+se cumple que $a | c_1 b_1 + \dots + c_n b_n$
 
 %
 % ejercicio 7
@@ -393,7 +185,7 @@ Usando lo anterior, muestra que si $a | b_1, a | b_2, \dots, a | b_n$, entonces 
 \textbf{9.} Calcula los siguientes incisos.
 \begin{enumerate}[label=\alph*)]
     \item Calcula 723 en base 7.
-        \begin{align*}    
+        \begin{align*}
             723 &= 103 \ast 7 + 2\\
             103& = 14 \ast 7 + 5\\
             14 &= 2 \ast 7 + 0\\
@@ -463,7 +255,30 @@ Podemos ver que estamos en base 2, por lo que si trasladamos 581 a base 2 podria
     1 &= 0 \ast 2 + 1\\
 \end{align*}
 
-De lo anterior podemos ver que 581 es igual a $(1001000101)_2$. Así vemos que se obtuvieron bien el problema 10, 7, 3 y 1, que son 
+De lo anterior podemos ver que 581 es igual a $(1001000101)_2$. Así vemos que se obtuvieron bien el problema 10, 7, 3 y 1, que son
 $512 + 64 + 4 + 1 = 581$. Por lo que, al tener 4 problemas correctos, el alumno no aprobó el examen.
+
+%
+% Extras. Ejercicio 2
+%
+\textbf{2.} Sean $(R, +, ·)$ un anillo conmutativo, $0$ el neutro aditivo de $R$ y $1$ el neutro multiplicativo de $R$. Muestra
+que $R = {0}$ si y solo si $1 = 0$. \\
+
+Demostraremos que $R = {0}$ si y solo si $1 = 0$.
+Procederemos por doble implicacion para demostrar nuestro bicondicional
+
+<--
+Supongamos que R = {0}
+Como $R$ es un anillo conmutativo por hipotesis tenemos que $1$ es el neutro multiplicativo de $R$, por lo que $1 \in R$ como $R = {0}$ entonces podemos concluir
+$1 = 0$
+
+-->
+Supongamos que $1 = 0$
+Notemos que los unicos objetos que podemos asegurar que pertenecen a $1 \in R$ y $0 \in R$, procederemos por contradiccion es decir que existe algun $c \neq 1$ y $c \neq 0$ entonces
+por existe $1 \in R$ tal que para todo $c \in R$, $1 · c = c$ y $c · 1 = c$.
+notemos que como $1 = 0$ entonces $0$ tambien es neutro multiplicativo por lo que substituyendo
+$0 · c = 0$ y $c · 0 = 0$ !
+La contradiccion anterior nos dice que al existir un $c \neq 1$ y $c \neq 0$ no se puede cumplir la propiedad de neutro multiplicativo
+De lo anterior podemos concluir que el unico miembro perteniente a $R$ es $0$, concluyendo $R = {0}$
 
 \end{document}
